@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage" BackgroundColor="Khaki">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <Label Grid.Row="0" HorizontalOptions="Center" FontSize="Large" Grid.ColumnSpan="3" Text="Sumator czasów"/>
+
+        <Label Grid.Row="1" HorizontalOptions="End" Text="Łączny czas (m:s): "/>
+        <Label Grid.Row="1" Grid.Column="1" x:Name="lacznyCzas"  Text="0:00"/>
+
+        <Label  Grid.Row="2"  HorizontalOptions="End" Text="Nowy czas (m:s) : "/>
+        <Entry Grid.Row="2" Grid.Column="1" x:Name="minuty"/>
+        <Entry Grid.Row="2" Grid.Column="2" x:Name="sekundy"/>
+        <Button  Clicked="ButtonClickedDodajCzas" Grid.Row="3" Grid.Column="1" BackgroundColor="Green" Text="Dolicz"/>
+        <Button Clicked="ButtonClickedReset" Grid.Row="3" Grid.Column="2" BackgroundColor="Red" Text="Reset"/>
+    </Grid>
+
+</ContentPage>
